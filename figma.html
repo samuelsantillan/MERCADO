@@ -1,4 +1,4 @@
-    +<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -24,7 +24,7 @@
             
             color: white;
             padding: 20px;
-            text-align: center;
+            text-align: left;
             font-size: 30px;
             font-weight: bold;
             width: 65%;
@@ -33,16 +33,18 @@
             align-items: center;
         }
         .content {
-            
-            padding: 50px;
+            display: block;
+            padding-left: 15px;
         }
         .content p {
             font-size: 16px;
             color: #333;
+            justify-content: center;
         }
         .content b {
             font-weight: bold;
         }
+            
         .highlight {
             color: #0099ff;
             font-weight: bold;
@@ -62,15 +64,7 @@
             
         }
         .footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 12px;
-
-           
-        }
-        .imagen {display: flex;
+            background-color: rgb(240, 240, 243);
             justify-content: end;
                 
              
@@ -84,11 +78,31 @@
 
         .header1{
             display: flex;
+            justify-content: space-around;
             background: linear-gradient(to right, #0049b7, #5fbbf8);
-        }    
+        }
+
+        .imgIconos {
+            height: 20px;
+            width: 20px;
+            padding-right: 10px;
+        }
+
+        .listaIconos {
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        .header{
+            height: 15px;
+            color: #d80e0e;
+        }
     </style>
 </head>
 <body>
+    <div class="header">
+
+    </div>
     <div class="container">
 <div class="header1">
         <div class="baner">
@@ -101,16 +115,23 @@
         
         
         <div class="content">
+            
             <p>Hola <b>[Nombre]</b>,</p>
             <p>Tus mensualidades de Mercado Pago están vencidas. Paga y evita que tu deuda <b>siga incrementando</b>.</p>
             <p>Aquí están algunas <span class="highlight">posibles situaciones</span> si el pago se atrasa:</p>
-            <ul>
+            <ul class="listaIconos">
+               <div style="display: flex;">
+                <img class="imgIconos" src="./image-Photoroom.png" alt="IMG1">
                 <li>Tu línea de crédito se mantendrá bloqueada</li>
+               </div>
+                <div style="display: flex;">
+                <img class="imgIconos" src="./image-Photoroom.png" alt="IMG2">
                 <li>Evita que tu situación sea reportada al buró de crédito</li>
+                </div>
             </ul>
             <p>¡Elige el medio de pago que prefieras!</p>
             <a href="#" class="cta-button">Pagar</a>
-            <p>Si necesitas ayuda, contáctanos</p>
+            <p style="text-align: center;">Si necesitas ayuda, contáctanos</p>
         </div>
         <div class="footer">
             Atentamente,<br>
